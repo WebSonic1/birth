@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Proposal?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="email-icon" onclick="showLoginCard()"> <!-- Email Icon -->
+        <div class="suggestion-box" id="suggestionBox">
+            It may be your feveroit person's name,
+            <br>
+            <br>
+            or may be your best friend,
+            <br>
+            may be something different.
+        </div>
+
+        <div class="login-card" id="login-card">
+            <input type="password" id="password" placeholder="Enter your choice" onclick="showSuggestionBox()">
+            <div class="show-password">
+                <img id="eye-icon" src="image/openeye-removebg-preview.png" alt="Toggle password visibility">
+            </div>
+            <button onclick="checkPassword()">Get In</button>
+            <div class="message" id="login-message"></div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div>
+            <h1 id="proposal-text">happy🥰 birthday🎂 muskan❣️ <br> i think the way ,i wish your birthday🎂 you like it <br> apne pic pr click kro </h1>
+            <div class="buttons">
+                <button id="yes">thank you so much❣️</button>
+                <button id="no"> thank you💌</button>
+            </div>
+            <h4 id="message"></h4>
+        </div>
+        <div class="photo-box" onclick="createHeart()">
+          <img src="muskan.jpg" alt="">
+        </div>
+        <div id="confetti-container"></div> <!-- Confetti container added here -->
+    </div>
+
+    <audio id="notification-sound" src="Audio/pop_up.mp3" preload="auto"></audio>
+    <audio id="hover-sound" src="Audio/Dekha Tenu Pehli Pehli Baar Ve_320 (mp3cut.net).mp3" preload="auto"></audio>
+    <!-- Hover audio added here -->
+
+<script src="index.js"></script>
+</body>
+
+</html>

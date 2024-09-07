@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4eac1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    cursor: url('muskan.jpg'), auto;
+}
+
+.email-icon {
+    width: 800px;
+    height: 500px;
+    position: relative;
+    cursor: pointer;
+    background-color: #f8d166;
+    border-radius: 10px;
+    box-shadow: 2px 4px 15px rgba(48, 47, 45, 0.388);
+    transition: transform 0.7s ease;
+}
+
+.email-icon::before {
+    content: '🥀💕';
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #f94c8bde;
+    border-radius: 1px 1px 90px 90px;
+    border-bottom: 100px solid #d4474c;
+    transform: translateY(-50%);
+}
+
+.email-icon::after {
+    content: '.......👀....';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 40px;
+    background: #ffeca1d3;
+    border: 2px solid #e89b0c;
+    border-radius: 9px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fef2b4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 270px;
+    height: 200px;
+    /* Increased height to accommodate the show/hide eye images */
+    z-index: 1000;
+}
+
+.login-card input {
+    padding: 10px;
+    background-color: #cbfb87c2;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    /* Reduced bottom margin */
+    border-radius: 5px;
+    border: 1px solid #54c40fde;
+    width: 75%;
+    position: relative;
+}
+
+.login-card .show-password {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: -92px;
+    top: -71px;
+    /* Adjust this value to align with the password input */
+}
+
+.login-card .show-password img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.login-card button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4ac24e;
+    color: #d5fbd0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 30%;
+
+}
+
+.login-card button:hover {
+    background-color: #1e8423;
+}
+
+.login-card .message {
+    margin-top: 14px;
+    color: rgb(255, 90, 90);
+}
+
+.suggestion-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e1e1e1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #333;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: none;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #ffd76a;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.171);
+    position: relative;
+    width: 800px;
+    height: 400px;
+    display: none;
+}
+
+h1 {
+    color: #d07b20;
+    font-size: 2.6rem;
+    display: inline-block;
+    margin-bottom: 85px;
+    margin-left: 50px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+h1:hover {
+    color: #e0326c;
+    transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+}
+
+@keyframes shine {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+h1.shine {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    animation: shine 2s ease-in-out infinite;
+    color: #d07b20;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 13px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button#yes {
+    background-color: #4caf50;
+    color: rgb(199, 254, 198);
+    margin-right: 60px;
+}
+
+button#yes:hover {
+    background-color: #3c8c30;
+}
+
+button#no {
+    background-color: #f44636;
+    color: rgb(250, 208, 208);
+    padding-left: 27px;
+    cursor: default;
+    padding-right: 27px;
+    position: relative;
+    transition: left 0.4s, top 0.4s, right 0.4s;
+}
+
+button#no:hover {
+    background-color: #f44636;
+}
+
+#message {
+    margin-top: 100px;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    color: #e81e61;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    background: #f8e4e9;
+    margin-left: 35px;
+    animation: none;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(218, 45, 82);
+    opacity: 1;
+    animation: rise 2s linear forwards;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    bottom: 10px;
+    right: 10px;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(218, 45, 82);
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    left: 25px;
+    top: 0;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(0.5) rotate(-45deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-150px) scale(1) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+.photo-box {
+    width: 300px;
+    height: 400px;
+    background-color: #eae2bf;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00;
+    animation: fall 2s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
